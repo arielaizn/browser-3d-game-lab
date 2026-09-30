@@ -1,0 +1,7 @@
+.DS_Store
+.vercel
+.env*
+*.log
+__pycache__/
+*.pyc
+presentation/.lo-profile/

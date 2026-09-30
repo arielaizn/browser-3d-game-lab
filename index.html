@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080a0c">
+  <meta name="description" content="שלושה עולמות תלת־ממדיים שאפשר לשחק בהם בדפדפן.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23080a0c'/%3E%3Cpath d='M8 32h48M32 8v48' stroke='%23d8fa55' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='10' fill='none' stroke='%23d8fa55' stroke-width='3'/%3E%3C/svg%3E">
+  <title>טיסה נמוכה · מעבדת משחקים תלת־ממדיים</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <canvas id="world" aria-label="עולם תלת־ממדי אינטראקטיבי"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="חזרה למעבדה">
+      <span class="brand-mark">03</span><span>LOW / ALT</span>
+    </a>
+    <div class="topbar-meta"><span class="live-dot"></span><span>ארקייד תלת־ממדי</span><span class="meta-divider"></span><span>שלושה עולמות</span></div>
+    <button id="soundToggle" class="icon-button" aria-label="השתק או הפעל צלילים"><span class="sound-bars"><i></i><i></i><i></i><i></i></span></button>
+  </header>
+
+  <main id="hub" class="hub">
+    <section class="hero-copy">
+      <p class="eyebrow"><span>מעבדת משחקים</span><span class="eyebrow-line"></span><span>גרסת 01</span></p>
+      <h1>שלושה עולמות.<br><em>גובה אחד.</em></h1>
+      <p class="hero-description">העיר היא מסלול. החלל הוא קצב.<br>המצלמה היא המגרש.</p>
+      <div class="hero-actions"><button class="primary-button" id="jumpIn"><span>בחר עולם</span><b>↙</b></button><span class="scroll-note">גלול כדי לגלות <span>↓</span></span></div>
+    </section>
+    <section class="game-grid" aria-label="בחר משחק">
+      <button class="game-card card-flight" data-game="flight">
+        <span class="card-index">01 <i></i> טיסה</span>
+        <span class="card-art art-city"><span class="art-sun"></span><span class="art-plane"></span><span class="art-ring r1"></span><span class="art-ring r2"></span></span>
+        <span class="card-title">קו הרקיע</span><span class="card-copy">טוס בין מגדלים. מצא את הטבעת הבאה.</span>
+        <span class="card-bottom"><span>WASD / חצים</span><b>התחל <i>↙</i></b></span>
+      </button>
+      <button class="game-card card-orbit" data-game="orbit">
+        <span class="card-index">02 <i></i> מסלול</span>
+        <span class="card-art art-orbit"><span class="planet"></span><span class="orbit-line o1"></span><span class="orbit-line o2"></span><span class="orbit-dot d1"></span><span class="orbit-dot d2"></span></span>
+        <span class="card-title">המסלול האחרון</span><span class="card-copy">אסוף שברי אור. שמור על הקצב.</span>
+        <span class="card-bottom"><span>WASD / חצים</span><b>התחל <i>↙</i></b></span>
+      </button>
+      <button class="game-card card-camera" data-game="camera">
+        <span class="card-index">03 <i></i> בימוי</span>
+        <span class="card-art art-camera"><span class="camera-frame f1"></span><span class="camera-frame f2"></span><span class="camera-subject"></span><span class="camera-ray"></span></span>
+        <span class="card-title">במאי התנועה</span><span class="card-copy">הזז את המצלמה. בנה את הפריים.</span>
+      <span class="card-bottom"><span>A / D · W / S · SPACE</span><b>התחל <i>↙</i></b></span>
+      </button>
+    </section>
+    <footer class="hub-footer"><span>נבנה בקוד. רץ בדפדפן.</span><span>תנועה: <kbd>W A S D</kbd> <span class="footer-sep">·</span> חזרה לתפריט: <kbd>ESC</kbd></span><a href="/presentation/">על המעבדה <span>↗</span></a></footer>
+  </main>
+
+  <aside id="gameHud" class="game-hud" aria-live="polite">
+    <button id="backButton" class="back-button"><span>↗</span> כל העולמות</button>
+    <div class="hud-title"><span id="hudIndex">01</span><div><h2 id="hudName"></h2><p id="hudObjective"></p></div></div>
+    <div class="hud-stats"><div><span class="stat-label">ניקוד</span><b id="score">000</b></div><div><span class="stat-label">זמן</span><b id="timer">00:00</b></div><div class="progress-stat"><span class="stat-label">התקדמות</span><div class="progress-track"><i id="progressFill"></i></div></div></div>
+    <p class="controls-hint" id="controlsHint"></p>
+    <div class="toast" id="toast" role="status"></div>
+  </aside>
+
+  <div class="crosshair" id="crosshair" aria-hidden="true"><i></i><i></i><b></b></div>
+  <div class="mobile-controls" id="mobileControls" aria-label="פקדי תנועה"><button data-key="ArrowUp">↑</button><div><button data-key="ArrowLeft">←</button><button data-key="ArrowDown">↓</button><button data-key="ArrowRight">→</button></div><button id="actionButton" class="action-button">צלם פריים</button></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
