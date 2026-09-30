@@ -41,7 +41,7 @@ Dark editorial arcade. Asphalt black, low-saturation city and studio colors, aci
 - Current screenshot evidence: `presentation/assets/{hub,flight,orbit,camera}.png`.
 - Browser validation: see `qa/REPORT.md` after the final review run.
 - Presentation exports: `presentation/index.html`, `presentation/low-alt-deck.pdf`, `presentation/low-alt-deck.pptx`.
-- Production URL: https://browser-3d-game-lab.vercel.app/ . Production deployment: `dpl_HmWK2yhSdo59uo7MKus3oApfMRzJ`.
+- Production URL: https://browser-3d-game-lab.vercel.app/ .
 - Public source and skills: https://github.com/arielaizn/browser-3d-game-lab, branch `main`.
 - Live checks on 2026-09-30 returned HTTP 200 for the hub, deck, three skill files, PDF, PPTX, and Three.js module. Headless Chrome opened each game and returned to the hub; browser errors: 0.
 - Live hub capture and route measurements: `qa/live-hub.png` and `qa/live-smoke.json`.
