@@ -23,4 +23,6 @@ The renderer was SwiftShader software rendering. Triangle and draw-call counts a
 - PDF: `presentation/low-alt-deck.pdf`.
 - Editable PowerPoint: `presentation/low-alt-deck.pptx`.
 
-Production URL and public repository are recorded in `docs/WORLD.md` after deployment verification.
+## Production
+
+The Vercel production URL and public GitHub repository are recorded in `docs/WORLD.md`. On the live URL, the hub, all three games, and the 13-slide deck loaded in headless Chrome. Every game returned to the hub; camera play reached `done=true`. Live browser errors: 0. See `qa/live-smoke.json` and `qa/live-hub.png`.

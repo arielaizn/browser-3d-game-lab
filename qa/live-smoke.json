@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "url": "https://browser-3d-game-lab.vercel.app/",
+  "states": {
+    "hub": {
+      "calls": 124,
+      "triangles": 6038,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "game": null
+    },
+    "flight": {
+      "calls": 104,
+      "triangles": 37370,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "game": "flight"
+    },
+    "orbit": {
+      "calls": 29,
+      "triangles": 6244,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "game": "orbit"
+    },
+    "camera": {
+      "calls": 17,
+      "triangles": 5428,
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "game": "camera"
+    },
+    "camera_complete": {
+      "screen": "playing",
+      "game": "camera",
+      "score": 315,
+      "progress": 1,
+      "done": true
+    },
+    "deck_slides": 13
+  },
+  "errors": []
+}

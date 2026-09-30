@@ -4,6 +4,9 @@ Three small 3D games share one browser hub. Each game has a separate control loo
 
 ## Play
 
+Live Hub: https://browser-3d-game-lab.vercel.app/
+Public repo: https://github.com/arielaizn/browser-3d-game-lab
+
 Open the live site or run a local static server from this folder:
 
 ```bash
